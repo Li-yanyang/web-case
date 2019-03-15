@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>案例二</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+<script>
+    function time() {
+        var date = new Date();
+        var div1 = document.getElementById("div1")
+        div1.innerHTML = date.toLocaleString();
+    }
+    setInterval("time()", 1000);
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>控制div属性</title>
+
+    <style>
+        .button {
+            width: auto;
+            /*宽：默认值，根据HTML定位规则分配*/
+            margin: 20px auto;
+            /*外边框：上20px 其他默认*/
+            background: wheat;
+            /*背景样式这里只设置颜色*/
+            text-align: center;
+            /*对齐方式*/
+        }
+        
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background: black;
+            margin: 100 auto;
+            display: block;
+            /*设置或检索对象是否及如何显示 block是默认值 none是隐藏对象*/
+        }
+    </style>
+    <script>
+        function button(val) {
+            var butt = document.getElementsByTagName("input");
+            var value = ["变宽", "变高", "变色", "隐藏", "重置"]
+            var att = ["width", "height", "background", "display", "display"];
+            var valu = ["200px", "200px", "blue", "none", "block"];
+            var Div1 = document.getElementById("div1");
+            var i = value.indexOf(val);
+            Div1.style[att[i]] = valu[i];
+            // alert(Div1)
+            // alert(att[i])
+            // alert(valu[i])
+        }
+    </script>
+</head>
+
+<body>
+    <div class="button">
+        <input type="button" value="变宽" onclick="button(this.value)">
+        <input type="button" value="变高" onclick="button(this.value)">
+        <input type="button" value="变色" onclick="button(this.value)">
+        <input type="button" value="隐藏" onclick="button(this.value)">
+        <input type="button" value="重置" onclick="button(this.value)">
+
+    </div>
+    <div id="div1"></div>
+</body>
+
+</html>

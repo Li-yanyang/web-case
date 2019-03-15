@@ -1,0 +1,114 @@
+<html>
+    <head>
+            <title>案例三</title>
+    </head>
+
+    <body>
+        <dl>
+            <li><input type="checkbox" name="allno" id="allno" onclick="selAllNo()">全选/全不选</li>
+            <li><input type="checkbox" name="like" id="">篮球</li>
+            <li><input type="checkbox" name="like" id="">足球</li>
+            <li><input type="checkbox" name="like" id="">排球</li>
+            <li><input type="checkbox" name="like" id="">羽毛球</li>
+        </dl>
+        <input type="button" value="全选" id="all" onclick="selAll()">
+        <input type="button" value="全不选" id="no" onclick="selNo()">
+        <input type="button" value="反选" id="other" onclick="selOther()">
+        <br>
+        <input type="button" value="全选/全不选" id="ALLNO" onclick="ALLNO()">
+    </body>
+
+<script>
+    function selAllNo ()
+    {
+        var allno = document.getElementById("allno");
+        var like = document.getElementsByName("like");
+
+            if(allno.checked == true)
+            {
+                for(var i=0;i<like.length;++i)
+                {
+                    like[i].checked = true;
+                }
+            }
+            else
+            {
+                for(var i=0;i<like.length;++i)
+                {
+                    like[i].checked = false;
+                }
+            }
+
+    }
+
+    function selAll()
+    {
+        var all = document.getElementById("all");
+        var like = document.getElementsByName("like");
+
+        for(var i=0; i<like.length; ++i)
+        {
+            like[i].checked = true;
+        }
+    }
+
+    function selNo()
+    {
+        var no = document.getElementById("no");
+        var like = document.getElementsByName("like");
+
+        for(var i=0; i<like.length; ++i)
+        {
+            like[i].checked = false;
+        }
+    }
+
+    function selOther()
+    {
+        var other = document.getElementById("other");
+        var like = document.getElementsByName("like");
+
+        for(var i= 0; i<like.length; ++i)
+        {
+            if(like[i].checked == true)
+            {
+                like[i].checked = false;
+            }
+            else
+             {
+                 like[i].checked = true;
+             }   
+        }
+    }
+
+    function ALLNO()
+    {
+        var ALLNO = document.getElementById("ALLNO");
+        var like = document.getElementsByName("like");
+        var j = 0;
+        for(var i = 0; i<like.length; ++i)
+        {
+            if(like[i].checked == true)
+            {
+                ++j;
+            }
+        }
+        if(j == like.length)
+        {
+            for(var i=0; i<like.length; ++i)
+            {
+            like[i].checked = false;
+             }
+        }
+        else
+        {
+            for(var i=0; i<like.length; ++i)
+        {
+            like[i].checked = true;
+        }
+        }
+    }
+
+</script>
+
+</html>

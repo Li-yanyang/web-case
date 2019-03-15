@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>案例五</title>
+    </head>
+    <body>
+        <select name="" id="select1" onchange="add1(this.value);">
+            <option value="0">请选择</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+            <option value="DD">DD</option>
+        </select>
+        <select name="" id="select2"></select>
+    </body>
+    <script>
+        var arr = new Array(4);
+        arr[0] = ["AA","A1","A2","A3","A4","A5"];
+        arr[1] = ["BB","B1","B2","B3","B4","B5"];
+        arr[2] = ["CC","c1","c2","c3","c4","c5"];
+        arr[3] = ["DD","D1","D2","D3","D4","D5"];
+
+        function add1(val)
+        {
+            var select2 = document.getElementById("select2");
+            var option2 = select2.getElementsByTagName("option");
+
+         //   if(option2.length != 0)
+            {
+                for(var m = 0; m<option2.length; ++m)
+                {
+                    select2.removeChild(option2[m]);
+                    --m;
+                }
+            }
+
+            for(var i = 0; i<arr.length; ++i)
+            {
+                var arr1 = arr[i];
+
+                if(arr1[0] == val)
+                {
+                    for(var j = 1;j<arr1.length;++j)
+                    {
+                       var addoption= document.createElement("option");
+                       var addtext= document.createTextNode(arr1[j]);
+                       addoption.appendChild(addtext);
+                       select2.appendChild(addoption);
+
+                    }
+                }
+            }
+        }
+    </script>
+</html>
