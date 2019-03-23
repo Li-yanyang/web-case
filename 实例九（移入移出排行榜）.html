@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>移入移出排行榜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 300px;
+            height: 500px;
+            border-style: solid;
+            margin: 100px auto;
+            overflow: auto;
+        }
+        
+        .box>h1 {
+            font-size: 30px;
+            font-weight: 200px;
+            color: coral;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul>li {
+            font-size: 20px;
+            font-weight: 100px;
+            border: 1px;
+            border-style: dashed;
+        }
+        
+        ul>li>span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-style: none;
+            border-bottom: 10px;
+            background-color: darkgray;
+            text-align: center;
+        }
+        
+        ul>li:nth-child(-n+3)>span {
+            background-color: coral;
+        }
+        
+        .content {
+            margin: 5px;
+            font-size: 10px;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .content>img {
+            width: 100px;
+            float: left
+        }
+        
+        .current .content {
+            display: block;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            $("li").hover(function() {
+                    $(this).addClass("current");
+                },
+                function() {
+                    $(this).removeClass("current");
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>电影排行榜</h1>
+        <ul>
+            <li><span>1</span>电影名称
+                <div class="content">
+                    <img src="images/case9.jpg" alt="">
+                    <p>幽暗洞中，白蛇（张喆 配音）苦苦修炼却不得其法，小青见此情景，将发髻上的碧玉簪子取下，令白蛇攥在手中。 那一刻，五百年前的记忆瞬间苏醒。五百年前，晚唐君主昏聩庸碌，掌握邪术的国师只手遮天，命令天下百姓捕蛇修法。 为了拯救族群，白蛇冒险行刺，结果却遭遇挫败，还失去了记忆。当她再度醒来，发现自己被一个专门捕蛇的村落所救下， 而那个胆小却善良的青年许宣（杨天翔 配音）则吸引了白蛇的注意</p>
+                </div>
+            </li>
+            <li><span>2</span>电影名称
+                <div class="content">
+                    <img src="images/case9.jpg" alt="">
+                    <p>幽暗洞中，白蛇（张喆 配音）苦苦修炼却不得其法，小青见此情景，将发髻上的碧玉簪子取下，令白蛇攥在手中。 那一刻，五百年前的记忆瞬间苏醒。五百年前，晚唐君主昏聩庸碌，掌握邪术的国师只手遮天，命令天下百姓捕蛇修法。 为了拯救族群，白蛇冒险行刺，结果却遭遇挫败，还失去了记忆。当她再度醒来，发现自己被一个专门捕蛇的村落所救下， 而那个胆小却善良的青年许宣（杨天翔 配音）则吸引了白蛇的注意</p>
+                </div>
+            </li>
+            <li><span>3</span>电影名称
+                <div class="content">
+                    <img src="images/case9.jpg" alt="">
+                    <p>幽暗洞中，白蛇（张喆 配音）苦苦修炼却不得其法，小青见此情景，将发髻上的碧玉簪子取下，令白蛇攥在手中。 那一刻，五百年前的记忆瞬间苏醒。五百年前，晚唐君主昏聩庸碌，掌握邪术的国师只手遮天，命令天下百姓捕蛇修法。 为了拯救族群，白蛇冒险行刺，结果却遭遇挫败，还失去了记忆。当她再度醒来，发现自己被一个专门捕蛇的村落所救下， 而那个胆小却善良的青年许宣（杨天翔 配音）则吸引了白蛇的注意</p>
+                </div>
+            </li>
+            <li><span>4</span>电影名称
+                <div class="content">
+                    <img src="images/case9.jpg" alt="">
+                    <p>幽暗洞中，白蛇（张喆 配音）苦苦修炼却不得其法，小青见此情景，将发髻上的碧玉簪子取下，令白蛇攥在手中。 那一刻，五百年前的记忆瞬间苏醒。五百年前，晚唐君主昏聩庸碌，掌握邪术的国师只手遮天，命令天下百姓捕蛇修法。 为了拯救族群，白蛇冒险行刺，结果却遭遇挫败，还失去了记忆。当她再度醒来，发现自己被一个专门捕蛇的村落所救下， 而那个胆小却善良的青年许宣（杨天翔 配音）则吸引了白蛇的注意</p>
+                </div>
+            </li>
+            <li><span>5</span>电影名称
+                <div class="content">
+                    <img src="images/case9.jpg" alt="">
+                    <p>幽暗洞中，白蛇（张喆 配音）苦苦修炼却不得其法，小青见此情景，将发髻上的碧玉簪子取下，令白蛇攥在手中。 那一刻，五百年前的记忆瞬间苏醒。五百年前，晚唐君主昏聩庸碌，掌握邪术的国师只手遮天，命令天下百姓捕蛇修法。 为了拯救族群，白蛇冒险行刺，结果却遭遇挫败，还失去了记忆。当她再度醒来，发现自己被一个专门捕蛇的村落所救下， 而那个胆小却善良的青年许宣（杨天翔 配音）则吸引了白蛇的注意</p>
+                </div>
+            </li>
+            <li><span>6</span>电影名称
+                <div class="content">
+                    <img src="images/case9.jpg" alt="">
+                    <p>幽暗洞中，白蛇（张喆 配音）苦苦修炼却不得其法，小青见此情景，将发髻上的碧玉簪子取下，令白蛇攥在手中。 那一刻，五百年前的记忆瞬间苏醒。五百年前，晚唐君主昏聩庸碌，掌握邪术的国师只手遮天，命令天下百姓捕蛇修法。 为了拯救族群，白蛇冒险行刺，结果却遭遇挫败，还失去了记忆。当她再度醒来，发现自己被一个专门捕蛇的村落所救下， 而那个胆小却善良的青年许宣（杨天翔 配音）则吸引了白蛇的注意</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+
+</html>

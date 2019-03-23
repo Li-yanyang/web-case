@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>轮播图</title>
+    <style>
+        #img1 {
+            width: 576px;
+            height: 324px;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            var img1 = document.getElementById("img1");
+            var arrimg = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg",
+                "images/5.jpg", "images/6.jpg", "images/7.jpg", "images/8.jpg"
+            ];
+            var index = 0;
+
+            var run = function() {
+                ++index;
+                index %= arrimg.length;
+                // console.log(arrimg[index]);
+
+                img1.src = arrimg[index];
+            }
+
+            var start = document.getElementById("start");
+            var stop = document.getElementById("stop");
+            var timer;
+            start.onclick = function() {
+                clearInterval(timer);
+                timer = setInterval(run, 1000);
+            }
+            stop.onclick = function() {
+                clearInterval(timer);
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <img id="img1" src="images\1.jpg">
+    <br>
+    <button id="start">开始</button>
+    <button id="stop">暂停</button>
+</body>
+
+</html>
